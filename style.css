@@ -1,0 +1,456 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cormorant Unicase", serif;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+b {
+  font-weight: 700;
+}
+
+h1 {
+  text-shadow: 1.5px 1.5px 1.5px rgb(44, 29, 16);
+  color: #190d09;
+  letter-spacing: 6px;
+}
+
+body {
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+header {
+  text-align: center;
+  font-size: 24px;
+  padding: 6px;
+  background-color: #bdb5a3;
+  border-bottom: 3px solid #645f53;
+  transition: ease-in-out 0.2s;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1.1fr 4fr;
+  text-align: center;
+  height: 100vh;
+  transition: ease-in-out 0.2s;
+}
+
+/* library */
+
+.library {
+  background-color: #a29b8b;
+  padding: 10px;
+  border-right: 3px solid #645f53;
+}
+
+.libraryCardAddBtn,
+.libraryAddButton {
+  font-size: 18px;
+  padding: 3px;
+  margin: 9px;
+  cursor: pointer;
+}
+
+.library-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 3px 9px;
+  overflow-y: auto;
+  max-height: 50%;
+}
+
+.library h2 {
+  color: #000000;
+  font-size: 36px;
+  padding-bottom: 10px;
+  letter-spacing: 3px;
+}
+
+.libraryCard {
+  background-color: #c1bdb3;
+  line-height: 1.5;
+  padding: 3px 6px;
+  border-radius: 9px;
+  border: 3px solid #41403e;
+  font-size: 21px;
+  box-shadow: 3px 3px 3px 0.3px black;
+  transition: ease-in-out 0.3s;
+}
+
+.libraryCard:hover {
+  scale: 1.03;
+}
+
+.libraryCardCloseBtn {
+  border: none;
+  cursor: pointer;
+  background-color: unset;
+  width: 15%;
+  font-size: 21px;
+  font-weight: 700;
+  transition: ease-in-out 0.15s;
+}
+
+.library-card-container {
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+}
+
+.library-card-info {
+  width: 100%;
+  padding-right: 9%;
+}
+
+/* arena */
+
+.arena {
+  background-color: #7e7869;
+  padding: 10px 30px;
+  transition: ease-in-out 0.6s;
+  /* border: 3px solid #000000; */
+}
+
+.arena:hover {
+  background-color: #756f61;
+}
+
+.arena h2 {
+  color: #000000;
+  text-shadow: 0px 0px 9px #c1bdb3;
+  font-size: 42px;
+  padding-bottom: 10px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  padding-bottom: 12px;
+}
+
+.arena-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  gap: 30px;
+}
+
+/* EntityCard */
+
+.entityCard {
+  background-color: #a29b8b;
+  line-height: 2.25;
+  padding: 3px 6px;
+  border-radius: 9px;
+  font-size: 21px;
+  box-shadow: 3px 3px 3px 0 black;
+  transition: ease-in-out 0.3s;
+}
+
+.entityCard:hover {
+  transform: translateY(-6px);
+}
+
+.player {
+  border: 3px solid #b3daff;
+}
+
+.enemy {
+  border: 3px solid #9b5555;
+}
+
+.npc {
+  border: 3px solid #fff4a2;
+}
+
+.death {
+  filter: opacity(0.4);
+}
+
+/* EntityCard buttons */
+
+.entityCard button {
+  font-size: 18px;
+  padding: 3px;
+  margin: 9px;
+  cursor: pointer;
+}
+
+.closeBtn {
+  border: none;
+  background-color: unset;
+  padding: 0 !important;
+  margin: 0 !important;
+  transition: ease-in-out 0.15s;
+}
+
+.closeBtn:hover {
+  scale: 1.5;
+  font-weight: 700;
+}
+
+.healBtn,
+.dmgBtn {
+  transition: ease-in-out 0.45s;
+  border-radius: 6px;
+  width: 30%;
+}
+
+.addStatusBtn {
+  transition: ease-in-out 0.45s;
+  border-radius: 6px;
+}
+
+.healBtn:hover {
+  box-shadow: inset 0 0 9px 6px rgb(155, 218, 121);
+}
+
+.dmgBtn:hover {
+  box-shadow: inset 0 0 6px 6px rgb(218, 124, 121);
+}
+
+.addStatusBtn:hover {
+  box-shadow: inset 0 0 6px 6px rgb(218, 192, 121);
+}
+
+.name {
+  font-size: 24px;
+  margin-top: -9px;
+}
+
+.inputField {
+  width: 15%;
+  font-size: 24px;
+  text-align: center;
+  margin: 6px;
+}
+
+.inputType {
+  font-size: 21px;
+}
+
+/* Status */
+.statusField {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin-bottom: 6px;
+  /* background-color: #000000; */
+}
+
+.statusInput {
+  width: 40%;
+  font-size: 21px;
+  text-align: center;
+  margin: 6px;
+}
+
+/* addEntity */
+.blur {
+  /* transition: ease-in-out 0.15s; */
+  filter: blur(5px) saturate(0%) sepia(50%);
+  pointer-events: none;
+}
+
+.addEntity {
+  background-color: #c0b7a6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 39vw;
+  height: 27vh;
+  transform: translate(-50%, -50%);
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: solid 3px #26180f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: ease-in-out 0.3s;
+  /* filter: opacity(0);2 */
+  display: none;
+}
+
+.addEntity-container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: center;
+  gap: 9px;
+}
+
+.addEntity input {
+  font-size: 21px;
+}
+
+.addEntity label {
+  font-size: 21px;
+}
+
+.addEntityBtn {
+  max-width: 50%;
+  padding: 6px;
+  font-size: 18px;
+}
+
+.addEntityHeader {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.addEntityHeader span {
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+}
+
+.addEntityCloseBtn {
+  align-self: flex-end;
+  border: none;
+  background-color: unset;
+  font-size: 21px;
+  font-weight: 700;
+  padding-top: 3px;
+  transition: ease-in-out 0.15s;
+}
+
+.addEntityCloseBtn:hover {
+  scale: 1.1;
+}
+
+.show {
+  display: flex;
+}
+
+/* media */
+
+@media (max-width: 600px) {
+  header {
+    font-size: 18px;
+    padding: 3px;
+  }
+  .main-container {
+    grid-template-rows: 40vh 5fr;
+    grid-template-columns: 1fr;
+  }
+
+  .library h2 {
+    font-size: 30px;
+  }
+
+  .library-container {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    min-height: 63%;
+  }
+
+  .libraryCard {
+    font-size: 18px;
+    min-width: 45%;
+  }
+
+  .libraryCardAddBtn,
+  .libraryAddButton {
+    font-size: 15px;
+    margin: 6px;
+  }
+
+  .arena {
+    padding: 6px 15px;
+  }
+
+  .arena h2 {
+    font-size: 33px;
+    padding-bottom: 9px;
+    padding-bottom: 9px;
+  }
+
+  .arena-container {
+    gap: 18px;
+  }
+
+  .entityCard {
+    line-height: 2;
+    font-size: 18px;
+  }
+  /* ff */
+
+  .healBtn,
+  .dmgBtn {
+    font-size: 21px;
+  }
+
+  .name {
+    font-size: 21px;
+  }
+
+  .inputField {
+    font-size: 21px;
+  }
+
+  .inputType {
+    font-size: 21px;
+  }
+
+  /* ааа */
+  .addEntity {
+    width: 80vw;
+    height: 30vh;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: solid 3px #26180f;
+  }
+
+  .show {
+    display: flex;
+  }
+
+  .addEntity-container {
+    gap: 6px;
+    grid-template-columns: 75% 20%;
+  }
+
+  .addEntity input {
+    font-size: 18px;
+  }
+
+  .addEntity label {
+    font-size: 18px;
+  }
+
+  .inputType {
+    font-size: 18px;
+  }
+
+  .addEntityBtn {
+    max-width: 80%;
+    padding: 3px;
+    font-size: 18px;
+  }
+
+  .addEntityHeader {
+    width: 100%;
+  }
+
+  .addEntityHeader span {
+    font-size: 21px;
+  }
+
+  .addEntityCloseBtn {
+    align-self: flex-end;
+    border: none;
+    background-color: unset;
+    font-size: 21px;
+    font-weight: 700;
+    padding-top: 3px;
+    transition: ease-in-out 0.15s;
+  }
+}

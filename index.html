@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Боевой трекер</title>
+  </head>
+  <body>
+    <header>
+      <h1>Боевой трекер</h1>
+    </header>
+
+    <section class="main-container">
+      <section class="library">
+        <h2>Библиотека</h2>
+        <div class="library-container"></div>
+        <button class="libraryAddButton">Добавить сущность</button>
+      </section>
+
+      <section class="arena">
+        <h2>Арена</h2>
+        <div class="arena-container"></div>
+      </section>
+    </section>
+
+    <section class="addEntity">
+      <div class="addEntityHeader">
+        <span>Введите характеристики</span>
+        <button class="addEntityCloseBtn">X</button>
+      </div>
+
+      <div class="addEntity-container">
+        <label for="">Введите имя сущности: </label>
+        <input type="text" class="inputName" />
+        <label for="">Введите здоровье сущности: </label>
+        <input type="number" class="inputHP" />
+        <label for="">Введите тип сущности: </label>
+         <select class="inputType" name="">
+          <option value="НПС">НПС</option>
+          <option value="Враг">Враг</option>
+          <option value="Игрок">Игрок</option>
+         </select>
+      </div>
+      <button class="addEntityBtn">Добавить сущность</button>
+    </section>
+
+    <script src="./entity.js"></script>
+    <script src="./storage.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
