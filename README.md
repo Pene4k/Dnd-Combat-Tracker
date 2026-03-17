@@ -4,6 +4,7 @@
 
 [⭐ Актуальная ссылка:] (https://pene4k.github.io/Dnd-Combat-Tracker/) 
 
+![Preview](./Images/Preview.png)
 ---
 
 ## 🛠 Возможности
