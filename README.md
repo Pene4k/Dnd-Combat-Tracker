@@ -2,7 +2,7 @@
 
 Удобный инструмент для мастеров, созданный для более удобного ведения боя. 
 
-[⭐ Актуальная ссылка:] (https://pene4k.github.io/Dnd-Combat-Tracker/) 
+[⭐ Актуальная ссылка:] (https://brdmu.github.io/Dnd-Combat-Tracker/) 
 
 ![Preview](./Images/Preview.png)
 ---
